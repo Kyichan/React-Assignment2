@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Banner from './banner';
+import Nav from './nav';
+import Footer from './footer';
 import ArtistsList from './artistList';
 const URL_ARTISTS = 'http://localhost:3004/artists';
-
-
 
 class Home extends Component {
     constructor(props){
@@ -30,8 +30,10 @@ class Home extends Component {
     render() {
         return(
             <div>
+                <Nav/>
                 <Banner/>
                 <ArtistsList allArtists={this.state.artists}/>
+                <Footer/>
             </div>
 
         )

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './header';
 import AlbumList from './albumList';
+import Nav from './nav';
+import Footer from './footer';
 
 const REQ_URL = `http://localhost:3004/artists`;
 
@@ -13,13 +15,14 @@ class Artist extends Component {
   }
 
   componentDidMount() {
-    // console.log(this.props.match.params.artistid);
+  // console.log(this.props.artists);
+      // console.log(this.props.match.params.artistid);
     fetch(`${REQ_URL}/${this.props.match.params.artistid}`, {
       method: 'GET'
     })
       .then(response => response.json())
       .then(json => {
-        console.log(json);
+        // console.log(json);
         this.setState({
           artist: json
         });
@@ -33,6 +36,7 @@ class Artist extends Component {
   render() {
     return (
       <div>
+        <Nav/>
         <Header />
         <div className="artist_bio">
           <div className="avatar">
@@ -50,7 +54,9 @@ class Artist extends Component {
           </div>
 
           <AlbumList albumList={this.state.artist.albums} />
+         
         </div>
+        <Footer/>
       </div>
     );
   }

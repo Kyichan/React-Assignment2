@@ -9,7 +9,19 @@ body {
 a {
   text-decoration: none;
 }
-
+/* Navigation */
+.main_nav ul {
+  list-style-type: none;
+  display: inline-flex;
+}
+.main_nav ul li{
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+}
+.main_nav {
+  background: #2b1452;
+}
 /* BANNNER */
 
 .banner .main_cover {
@@ -111,6 +123,68 @@ header {
   width: 50%;
 }
 
+/* Album Detail */
+.album_detail{
+   width: 50%;
+   text-align: center;
+   float:left;
+}
+
+.album_detail img {
+  width: 80%;
+}
+/* Footer */
+.footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  background: #2b1452;
+  color: #ffffff;
+  padding: 20px 0px;
+}
+.footer a{
+  color: #ffffff;
+}
+/* Contact Form */
+form.contact_form {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+input[type="text"] {
+  margin-left: 16px;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #2b1452;
+  border-radius: 20px;
+}
+input[type="text"]:focus{
+  outline: 0;
+}
+input[type="submit"] {
+  background: #2196f3;
+  border: 0;
+  color: #ffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 7px 36px;
+  border-radius: 21px;
+  font-weight: bold;
+}
+input[type="submit"]:active,input[type="submit"]:focus{
+  outline:0;
+}
+input[type="submit"]:hover{
+  background: #2b1452;
+  cursor:pointer;
+
+}
+
+
 /* Media Queries */
 @media only screen and (min-width: 1024px) {
   .artists_list .artist_item {
@@ -123,6 +197,9 @@ header {
     float: left;
     width: 50%;
   }
+
+  
+ 
 }
 
 @media only screen and (max-width: 600px) {
@@ -130,4 +207,9 @@ header {
     float: none;
     width: 100%;
   }
+  .album_detail{
+    width: 100%;
+    text-align: center;
+    float:none;
+ }
 }
